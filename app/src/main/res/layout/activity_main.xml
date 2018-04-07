@@ -6,7 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.scorekeeperapp.MainActivity">
 
-    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pistonsvslakers" />
 
 
     <LinearLayout
@@ -21,11 +25,47 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="40sp"
+                android:textColor="@android:color/white"
+                android:text="Lakers" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addOnePointForLakers"
+                android:text="Add +1 Point" />
+
+            <TextView
+                android:id="@+id/lakers_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:padding="24dp"
+                android:textSize="30sp"
+                android:text="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:textSize="40sp"
+                android:textColor="@android:color/white"
                 android:text="Pistons" />
 
 
@@ -42,51 +82,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
                 android:padding="24dp"
+                android:textSize="30sp"
                 android:text="0" />
 
 
         </LinearLayout>
 
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="Lakers" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="addOnePointForLakers"
-                android:text="Add +1 Point" />
-
-            <TextView
-                android:id="@+id/lakers_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="24dp"
-                android:text="0" />
-
-
-        </LinearLayout>
     </LinearLayout>
 
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:onClick="resetScores"
-            android:text="RESET"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="resetScores"
+        android:text="RESET" />
 
 </RelativeLayout>
